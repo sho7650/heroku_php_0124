@@ -13,6 +13,7 @@ return [
     |
     */
 
+    $url = parse_url(getenv('DATABASE_URL'));
     'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
@@ -64,6 +65,17 @@ return [
             'prefix' => '',
             'schema' => 'public',
             'sslmode' => 'prefer',
+        ],
+
+        'herokupgsql' => [
+          'driver' => 'pgsql',
+          'host' => $url['host'],
+          'database' =>  substr($url['path'], 1),
+          'username' => $url['user'],
+          'password' => $url['pass'],
+          'charset' => 'utf8',
+          'prefix' => '',
+          'schema' => 'public',
         ],
 
     ],

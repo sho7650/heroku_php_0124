@@ -6,6 +6,9 @@
   "env": {
     "SECRET_KEY_BASE": {
       "generator": "secret"
+    },
+    "DB_CONNECTION": {
+      "value": "herokupgsql"
     }
   },
   "formation": {
