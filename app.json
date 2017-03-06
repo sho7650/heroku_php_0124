@@ -5,9 +5,11 @@
   },
   "env": {
     "APP_KEY": {
-      "generator": "secret"
+      "description": "Set the application key",
+      "value": ""
     },
     "DB_CONNECTION": {
+      "description": "Set the using database",
       "value": "herokupgsql"
     }
   },
