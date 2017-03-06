@@ -4,7 +4,7 @@
     "postdeploy": "php artisan migrate:install"
   },
   "env": {
-    "SECRET_KEY_BASE": {
+    "APP_KEY": {
       "generator": "secret"
     },
     "DB_CONNECTION": {
