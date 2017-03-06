@@ -1,0 +1,19 @@
+{
+  "name": "heroku_php_0124",
+  "scripts": {
+    "postdeploy": "php artisan migrate"
+  },
+  "env": {
+    "APP_KEY": {
+      "generator": "secret”
+    }
+  },
+  "formation": {},
+  "addons": [    "heroku-postgresql:hobby-dev"  ],
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    }
+  ]
+}
+
